@@ -1,0 +1,14 @@
+<!--pages/addcity/addcity.wxml-->
+<!--text>pages/addcity/addcity.wxml</text-->
+
+<view class="search" >
+<input class="text"bindinput="input"></input>
+<image class="button"style="width:100rpx;height:100rpx"bindtap="search"src="../../image/search.png" ></image>
+<!--button class="button" >search</button-->
+</view>
+
+
+
+
+<view class="citys"wx:for="{{citys}}" wx:for-index="i" wx:for-item="item"><view id="{{i}}" class="item"bindtap="clickitem">{{item}}</view></view>
+

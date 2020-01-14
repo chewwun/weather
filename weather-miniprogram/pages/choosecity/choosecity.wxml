@@ -1,0 +1,23 @@
+<!--pages/choosecity/choosecity.wxml-->
+<view data-index="{{i}}" wx:for="{{weather}}" wx:key="{{item}}" class="touch-item {{item.status? 'touch-move-active' : ''}}"wx:for-index="i">
+　　<view  >
+　　　　<view id="{{i}}"  data-index='{{i}}' bindtap="gotoweather" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
+　　　　<view class='title'>{{item.weathername}}</view>
+　　
+　　</view>
+</view>
+
+<view class="del" id="{{i}}" bindtap="deleteitem" data-index="{{i}}">删除</view>
+</view>
+
+
+<!--view class="item" wx:for="{{weather}}" wx:for-index="i" wx:for-item="item"><view class="weather-item"id="{{i}}"bindtap="gotoweather">{{item}}</view><button class="button" id="{{i}}"bindtap="deleteitem">-</button></view-->
+
+<!--view class="contents">    <view class="touch-item {{true? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchM" wx:for="{{weather}}" wx:key="">        <view class="content">            <view class="content_name">{{item.weathername}}</view>              
+</view>        
+<view class="del" data-id="{{item.d_id}}"  data-status="{{item.status}}" catchtap="del" data-index="{{index}}">删除</view>    </view></view-->
+
+<view class="buttonview">
+<button class="button" bindtap="editcity">编辑城市</button>
+<button class="button" bindtap="addcity">添加城市</button>
+</view>

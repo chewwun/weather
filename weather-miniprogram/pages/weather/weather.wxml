@@ -1,0 +1,96 @@
+<!--index.wxml-->
+<view class="contentContainer" bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
+
+<view hidden="{{weather}}">
+<view hidden="{{!sunset}}"> 
+<image src="../../image/{{imgname}}.jpg" class="bg"></image>
+<view class="container">
+ <view class="search" >
+<!--textarea class="text"bindinput="input"></textarea-->
+<image style="width:30px;height:30px"src="../../image/change.jpg.png" class="bg"bindtap="addcity"></image>
+<!--button class="button" bindtap="addcity">+</button-->
+<!--button class="button" bindtap="addcommon">+</button-->
+</view>
+ 
+  <view class="nowWeather">
+   <view class="w size1" value='{{textareaVal}}'bindtap="click"><image style="width:50rpx;height:55rpx"src="../../image/pos.png" class="bg"></image> {{city}}</view>
+    <view class="road w">{{street}}</view>
+    <view class="temp w b">{{tem}}°</view>
+    <view class="weather w">{{txt}} | 空气 {{qlty}}</view>
+  </view>
+ 
+  <view class="weahterDetail">
+    <view class="">
+      <view class="w center">{{dir}}</view>
+      <view class="w  center ">{{winddirect}}</view>
+      <view  class="w b center f50">{{windpower}}</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">温度范围</view>
+      <view class="w b center f50">{{templow}}°-{{temphigh}}°</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">体感温度</view>
+      <view class="w b center f50">{{templow}}°</view>
+    </view>
+  </view>
+ 
+</view>
+ 
+<view class="update">更新时间：{{updatetime}}</view>
+<view wx:for="{{daily}}" wx:for-index="i" wx:for-item="item">
+  <view class="hor forcast" bindtap="clickweather"id="{{i}}">
+      
+      <view wx:if="{{i<=2}}"class="centerw">{{day[i]}}</view>
+      <view wx:else class="centerw">{{item.date}}</view>
+
+    <view class="hor">
+      <image class="img" src="../../image/{{item.day.img}}.png"></image>
+      <view class="centerw" >{{item.day.weather}}</view>
+    </view>
+    <view class="centerw">{{item.day.winddirect}}/ {{item.day.windpower}}</view>
+  </view>
+</view>
+</view>
+<view hidden="{{sunset}}">
+
+<image src="../../image/back.jpg"style="width:100rpx;height:100rpx;margin-left:85%" bindtap="back1"class="bg"></image>
+<view style="font-size:20px">日出日落时间：{{sunrisedata}}-{{sunsetdata}}</view>
+<view class="zhong">
+
+<view class="progress">
+<canvas canvas-id="canvasProgress" style="width: {{canvasWidth}}rpx; height: {{canvasHeitht}}rpx;margin-top: 30%;"></canvas>      
+</view>
+
+<view class="progress">
+
+<canvas canvas-id="canvasProgressReal" style="width: {{canvasWidth}}rpx; height: {{canvasHeitht}}rpx;margin-top: 30%;"> </canvas>     
+ </view>
+ </view>
+</view>
+</view>
+<view hidden="{{!weather}}"class="xiang">
+
+<view class="xiangxi"hidden="{{weilaiyizhou}}"bindlongpress="weilaiyizhou">
+<image src="../../image/back.jpg"style="width:100rpx;height:100rpx;margin-left:85%" bindtap="back"class="bg"></image>
+<view class="font1" >未来一周天气预报>></view>
+<canvas class="canvas" canvas-id="lineGraph"></canvas>
+</view>
+<view class="xiangxi"hidden="{{tianqixiangqing}}"bindlongpress="tianqixiangqing">
+<view class="font1">天气详情>></view>
+<canvas class="canvas1" canvas-id="lineGraph1"></canvas>
+</view>
+<view  class="xiangxi"hidden="{{detail}}"bindlongpress="detail">
+<view class="font1">温馨提示>></view>
+<view hidden="{{detail}}"class='C'  wx:for="{{index}}"wx:for-index="i" wx:for-item="item">
+
+<view>{{item.iname}}</view>
+<view>{{item.ivalue}}</view>
+<view>{{item.detail}}</view>
+</view>
+
+</view>
+</view>
+</view>

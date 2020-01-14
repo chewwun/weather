@@ -1,0 +1,175 @@
+/**index.wxss**/
+ 
+/**common css**/
+page{
+  height: 100%;
+ 
+}
+.w{
+  color: white;
+}
+.b{
+  font-weight: bold;
+}
+ 
+.l{
+  border: 1rpx solid #fff;
+}
+ 
+.center{
+  text-align: center;
+  margin: auto 0;
+  
+}
+.text{
+  margin-left:10%;
+  height: 100%;
+  border-style: solid;
+  border-width: 5rpx;
+  border-color:white;
+ 
+}
+.button{
+
+ width:1%;
+ 
+}
+.centerw{
+   text-align: center;
+  margin: auto 0;
+  width: 40%
+}
+ .search{
+     display: flex;
+  margin-left:90%;
+  height: 10%;
+ 
+ }
+ .font1{
+   font-size:20px;
+     font-style: border;
+     
+ }
+ .canvas{
+   background-color: ghostwhite;
+   margin-top: 5%;
+
+ 
+   margin-left: 3%
+ }
+ .C{
+   margin-top:3%;
+   background-color: whitesmoke
+ }
+ .canvas1{
+   background-color: ghostwhite  ;
+ margin-top: 5%; 
+ margin-left: 3%
+ }
+ .xiangxi{
+    background-color: #eee;
+    
+    height:45%;
+  
+  
+     
+ }
+ .update{
+   margin-left:20%
+ }
+ .xiang{
+   
+    
+    width: 100%;
+    height:100%
+  
+ }
+ 
+.progress {
+
+  position:absolute;
+
+  z-index: 1;
+
+}
+.sun{
+  margin-top:25%;
+  margin-left:30%
+}
+.zhong{
+  margin-left: 30%
+}
+ .font{
+   font-style: border;
+   
+ }
+.hor{
+  display: flex;
+  
+}
+ 
+.f50{
+  font-size: 50rpx;
+}
+ 
+/**index css**/
+ 
+ 
+.bg {
+  width: 100%;
+  height: 700rpx;
+}
+ 
+.temp{
+  font-size: 170rpx;
+}
+ 
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 700rpx;
+  display: block;
+}
+   
+.size{
+  height: 10%
+}
+.size1{
+  height: 10%;
+  
+}
+.nowWeather{
+  padding-left: 60rpx;
+   padding-right: 60rpx;
+ 
+
+  
+}
+ 
+.weahterDetail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 50rpx;
+}
+ 
+.forcast{
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  border-bottom: 1rpx solid #eee;
+  justify-content: space-around;
+}
+ 
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx
+}
